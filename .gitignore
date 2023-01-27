@@ -4,6 +4,7 @@
 # Log file
 *.log
 *.classpath
+*.settings
 *.target
 /target/
 /test-output/
