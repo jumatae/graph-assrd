@@ -1,0 +1,34 @@
+query ($characterId: Int!, $episodeId: Int!, $name: String, $episode: String!) {
+  character(characterId: $characterId) {
+    name
+    gender
+    status
+    id
+  }
+  location(locationId: 1) {
+    name
+    dimension
+  }
+  episode(episodeId: $episodeId) {
+    name
+    air_date
+    episode
+  }
+  characters(filters: {name: $name}) {
+    info {
+      count
+    }
+    result {
+      name
+      type
+    }
+  }
+  episodes(filters: {episode: $episode}) {
+    result {
+      id
+      name
+      air_date
+      episode
+    }
+  }
+}

@@ -1,0 +1,14 @@
+mutation {
+  createLocation(location: {name: "Latam", type: "Southzone", dimension: "234"}) {
+    id
+  }
+  createCharacter(character: {name: "10K30", type: "Macho", status: "Live", species: "fantasy", gender: "Male", image: "png", originId: 244, locationId: 775}) {
+    id
+  }
+  createEpisode(episode: {name: "the return Bear", air_date: "1950 june", episode: "Prime"}) {
+    id
+  }
+  deleteLocations(locationIds: [842]) {
+    locationsDeleted
+  }
+}
